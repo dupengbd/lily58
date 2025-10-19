@@ -1,6 +1,10 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
-
+config ZMK_KSCAN_MATRIX_ROWS 
+    default 6  # 原4行，新增后改为5行 
+ 
+config ZMK_KSCAN_DEBOUNCE_MS 
+    default 20  # 如需调整消抖时间 
 config SHIELD_LILY58_LEFT
     def_bool $(shields_list_contains,lily58_left)
 
