@@ -20,9 +20,3 @@
     status = "okay";
 };
 
-
-&uart0 {
-    status = "okay";
-    tx-pin = <21>;
-    rx-pin = <20>;
-};
