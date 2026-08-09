@@ -93,15 +93,21 @@ RC(5,0) RC(5,1) RC(5,2) RC(5,3) RC(5,4) RC(5,7)
     };
 };
 
+
+
+
+
 / {
     chosen {
         zmk,studio-rpc-uart = &uart0;
     };
 };
-/ {
-    chosen {
-        zmk,studio-rpc-uart = &uart0; /* 假设使用的是 uart0 */
-    };
+
+&uart0 {
+    status = "okay";
+    current-speed = <115200>;
+    tx-pin = <20>;  /* 根据你的主控修改 */
+    rx-pin = <21>;  /* 根据你的主控修改 */
 };
 
 
